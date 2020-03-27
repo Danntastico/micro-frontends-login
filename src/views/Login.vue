@@ -6,7 +6,7 @@
 
         <p class="text-sm font-bold text-white text-center">Login</p>
       </nav>
-      <form class="px-8 pt-6 pb-8 mb-4" @submit.prevent="onSubmit(user, password)">
+      <form class="px-8 pt-6 pb-8 mb-4">
         <fieldset class="mb-10">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="username"></label>
           <input
@@ -31,7 +31,7 @@
           <button
             class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button"
-            v-on:click="onSubmit"
+            @:click="onSubmit"
           >Sign In</button>
         </div>
       </form>
