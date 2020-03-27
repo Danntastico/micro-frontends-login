@@ -49,9 +49,6 @@ export default {
     };
   },
   methods: {
-    onclickme(){
-      this.onSubmit;
-    },
     onSubmit(user, password) {
       if (user === 'admin' && password === '12345') {
         sessionStorage.setItem('user', JSON.stringify({ username: user }));
