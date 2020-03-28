@@ -3,35 +3,27 @@
     <div class="bg-white rounded-b shadow-xl">
       <nav class="bg-orange-500 px-8 py-2 rounded-t flex justify-center">
         <img src="https://vuejs.org/images/logo.png" alt="logo" class="mr-2" width="30" />
-
         <p class="text-sm font-bold text-white text-center">Login</p>
       </nav>
       <form class="px-8 pt-6 pb-8 mb-4" @submit.prevent="onSubmit(user, password)">
-        <fieldset class="mb-10">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="username"></label>
-          <input
-            v-model="user"
-            class="appearance-none border-b w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="username"
-            type="text"
-            placeholder="Username"
-          />
-        </fieldset>
-        <fieldset class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password"></label>
-          <input
-            class="appearance-none border-b border-gray-300 w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            id="password"
-            type="password"
-            placeholder="Password"
-            v-model="password"
-          />
-        </fieldset>
-          <button
-            class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button"
-          >Sign In</button>
-      </form>
+            <fieldset class="form-group mb-10 ">
+              <input
+                class="appearance-none border-b w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                v-model="user"
+                placeholder="Username"
+              />
+            </fieldset>
+            <fieldset class="form-group mb-6">
+              <input
+                class="appearance-none border-b border-gray-300 w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                v-model="password"
+                placeholder="Password"
+              />
+            </fieldset>
+            <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Sign in</button>
+          </form>
     </div>
   </div>
 </template>
