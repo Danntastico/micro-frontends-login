@@ -38,27 +38,24 @@
 
 <script>
 export default {
-  name: 'Login',
-  data(){
+  name: 'loginView',
+  data() {
     return {
       user: null,
-      password: null
+      password: null,
     };
   },
   methods: {
-    onclickme(){
-      this.onSubmit;
-    },
     onSubmit(user, password) {
       if (user === 'admin' && password === '12345') {
         sessionStorage.setItem('user', JSON.stringify({ username: user }));
         sessionStorage.setItem('token', 'your auth token here');
         window.history.pushState(null, null, '/');
       } else {
-        this.$toastr.e('Invalid username or password');
+        this.$toastr.e('Invalid credentials');
       }
     },
-  }
+  },
 };
 </script>
 
